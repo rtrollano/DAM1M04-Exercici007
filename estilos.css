@@ -3,6 +3,15 @@
   margin: auto;
   text-align: center;
 }
+.hero {
+  max-width: 1264px;
+  margin: auto;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-decoration: underline;
+}
 
 html, body {
     margin: 0;
@@ -18,8 +27,24 @@ body {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    min-height: 100vh;        /* ocupa toda la pantalla */
+    display: flex;
+    flex-direction: column;
 }
 
+h2, h3 {
+    text-align: center;
+}
+
+h2 {
+  color:black;
+  background: white;
+}
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -68,29 +93,172 @@ body {
 }
 .desc {
   display: flex;
-  flex-direction:row;
-  margin: 5%;
-  gap: 20%;
-  display: flex;
-  justify-content: center;
-  background-color: rgb(64, 224, 208, 0.5);
+  flex-direction:column;
+  justify-content: right;
+  background-color: rgb(64, 224, 208, 0.7);
   border-radius: 9%;
   border: solid black;
-  padding: 1%;
+  width: 50%;
 
 }
 
 .pieza_de{
-
     display: block;
     color: black;
-    text-align: center;
-    transition: linear 1.5s;
+    text-align: left;
 }
 
 .video {
   border-radius: 4%;
   border: solid 8px black;
+  margin: auto;
+  display: block;
+}
 
+
+.footer {
+  margin-top: auto;       
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  background: black;
+  padding: 1%;
+  height: 60px;
+}
+
+.rrss {
+  display: flex;
+  gap: 10px;
+}
+
+.copyright {
+  margin: 0;
+}
+
+/*Todo lo relacionado con el formulario*/
+
+form {
+  background:#fff;
+  border-radius: 20px;
+  padding: 5%;
+  border: 10px solid purple;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+#intera {
+  background: rgb(230, 230, 175);
+}
+.campos {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.campos input {
+  border: 2px solid;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+  width: 275px;
+}
+
+.campos input:focus {
+  border-color: purple;
+  outline: none;
+}
+
+.flotante {
+  color: #81888f;
+  background: white;
+  font-size: 16px;
+  left: 10px;
+  padding: 0 4px;
+  pointer-events: none;
+  position: absolute;
+  top: 5px;
+  transition: all 0.3s ease;
+}
+
+.flotante.fija {
+  color: purple!important;
+  font-size: 12px;
+  top: -10px;
+  background-color: white;
+}
+
+.campos:has(input:focus) .flotante,
+.campos input:not(:placeholder-shown) + .flotante {
+  color: purple;
+  font-size: 12px;
+  top: -10px;
+}
+
+.campos:has(textarea:focus) .flotante,
+.campos textarea:not(:placeholder-shown) + .flotante {
+  color: purple!important;
+  font-size: 12px;
+  top: -10px;
+  background-color: white;
+}
+
+.msg {
+  bottom: -18px;
+  color: orangered;
+  font-size: 12px;
+  left: 4px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.4s ease;
+}
+
+.campos input:invalid:focus ~ .msg,
+.campos input:invalid:not(:placeholder-shown) ~ .msg {
+  opacity: 1;
+}
+
+button {
+  background: purple;
+  border: 3px solid black;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  gap: 20%;
+}
+
+button:hover {
+  background: black;
+  border: 3px solid purple;
+
+}
+input[type="color"] {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: purple; 
+    cursor: pointer;
+}
+select, textarea {
+    width: 275px;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-size: 15px;
+}
+select, textarea:focus {
+      border: 2px solid purple;
 
 }

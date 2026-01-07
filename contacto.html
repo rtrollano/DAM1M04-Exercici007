@@ -25,7 +25,23 @@
 <h2>Contacto</h2>
 
 <body id="formulario">
-    <form class="formulario">
+    <div class="desc autocenter">
+        Para cualquier consulta no dudes en contactarnos:
+
+        <div>Google Maps</div>
+        <br>
+        <div>
+            <a href="tel:+34900123456">Por teléfono</a>
+        </div>
+        <br>
+        <div>
+            <a href="mailto:rtrollanolopez.25cf@gmail.com.">
+                Por e-mail
+            </a>
+        </div>
+    </div>
+    <br>
+    <form class="formulario autocenter">
         <div class="campos">
             <input type="text" id="nombre" name="nombre" placeholder=" " required title="Campo obligatorio">
             <label class="flotante" for="nombre">Nombre completo</label>
@@ -42,37 +58,11 @@
             <span class="msg">Es necesario indicar el '+' y el código del país</span>
         </div>
         <div class="campos">
-            <input type="number" name="edad" id="edad" min="18" max="99" step="5" placeholder=" " title="Ha de ser mayor de edad">
-            <label class="flotante" for="edad">Edad</label>
-            <span class="msg">La edad ha de ser entre 18 y 99 años</span>
-        </div>
-        <div class="campos">
-            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" title="Indica tu edad de nacimiento">
-            <label  class="flotante fija" for="fecha_nacimiento">Fecha de nacimiento</label>
-            <span class="msg">Indica tu edad de nacimiento</span>
-        </div>
-        <div class="campos">
-            <label  class="flotante fija" for="franja">Franja</label>
-            <input type="time" name="franja" id="franja" title="Franja horaria de contacto">
-            <span class="msg">Franja horaria de contacto</span>
-        </div>
-        <div class="campos">
-            <label class="flotante fija" for="pais">País</label>
-            <select id="pais" name="pais" required>
-                <option value="" disabled selected hidden>Selecciona una país</option>
-                <option value="es">España</option>
-                <option value="fr">Portugal</option>
-                <option value="it">Italia</option>
-                <option value="it">Alemania</option>
-            </select>
-        </div>
-        <div class="campos">
             <textarea id="comentarios" name="comentarios" rows="4" cols="40" placeholder=" " required></textarea>
             <label class="flotante" for="comentarios">Comentarios</label>
         </div>
             <button type="submit">Enviar</button>
             <button type="reset">Borrar</button>
-
     </form>
 <footer class="footer">
      <p class="copy">&copy; RTL, 2026</p>
